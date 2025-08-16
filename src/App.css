@@ -1,0 +1,59 @@
+*,
+*::before *::after {
+  box-sizing: border-box;
+}
+body {
+  background: linear-gradient(to right, rgb(121, 36, 121), rgb(66, 5, 109));
+  margin: 0;
+}
+.cal-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 6rem);
+  grid-template-rows: minmax(7rem, auto) repeat(4, 4rem);
+  margin-top: 7rem;
+  justify-content: center;
+}
+
+.cal-grid > button {
+  cursor: pointer;
+  font-size: 2rem;
+  border: 2px solid rgba(17, 16, 17, 0.856);
+  background-color: rgba(78, 18, 80, 0.562);
+  
+}
+.cal-grid > button:hover {
+  background-color: rgb(78, 18, 80);
+  box-shadow: 0 0 10px rgba(186, 85, 211, 0.8), 0 0 20px rgba(186, 85, 211, 0.6),
+    0 0 40px rgba(186, 85, 211, 0.4);
+  transform: scale(1.05);
+}
+
+.span {
+  grid-column: span 2;
+}
+
+.op {
+  grid-column: 1 / -1;
+  grid-row: 1;
+  background-color: rgba(33, 12, 36, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+  padding-bottom: 0.75rem;
+  padding-right: 0.75rem;
+  border: 2px solid black;
+  border-top-left-radius: 3rem;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.op .current-operand {
+  color: rgb(255, 255, 255);
+  font-size: 1.5rem;
+}
+.op .prev-operand {
+  color: rgb(255, 255, 255, 0.5);
+  font-size: 1.5rem;
+}
