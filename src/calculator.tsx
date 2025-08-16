@@ -22,6 +22,7 @@ export default function Calculator() {
   }
 
  
+
   function compute() {
     let result: number;
     const prev = parseFloat(previousOperand);
